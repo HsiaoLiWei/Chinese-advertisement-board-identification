@@ -21,11 +21,11 @@ https://drive.google.com/drive/folders/1CBMReE3JznmqY9cujOODxZVkvzaPpjVb?usp=sha
 
 # Testing
 先將路徑移到yoloV5底下
-'''bash
+
 $ cd ./yoloV5
-'''
+
 執行 Text_detection.py 檔案，模型輸入圖片請放在 ./yoloV5/example/ 底下，example資料夾底下有圖片範例，執行結束後，預測結果會存在 ./yoloV5/out/，檔名後面會有預測結果，如果是沒有單字或判斷不清楚，會給###，如果有文字，就會顯示預測結果
-'''bash
+
 $ python3 Text_detection.py
-'''
+
 
