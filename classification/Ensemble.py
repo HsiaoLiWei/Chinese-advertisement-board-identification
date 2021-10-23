@@ -1,3 +1,10 @@
+'''
+Modified Date: 2021/10/23
+
+Author: Li-Wei Hsiao
+
+mail: nfsmw308@gmail.com
+'''
 from PIL import Image
 import tqdm, os, math, csv, copy, cv2, random
 import joblib
