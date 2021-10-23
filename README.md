@@ -3,14 +3,14 @@
 
 # Computer equipment
 Testing:
-CPU: Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz
-RAM: 16GB
-GPU: NVIDIA GeForce RTX 2060 6GB
+CPU: Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz \n
+RAM: 16GB \n
+GPU: NVIDIA GeForce RTX 2060 6GB \n
 
-Training:
-CPU: Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz
-RAM: 128GB
-GPU: NVIDIA GeForce RTX 3090 24GB
+Training: \n
+CPU: Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz \n
+RAM: 128GB \n
+GPU: NVIDIA GeForce RTX 3090 24GB \n
 
 # Pretrain models load
 將訓練好的yoloV5 m 模型下載後，放到 ./yoloV5/runs/train/expm/weights/
