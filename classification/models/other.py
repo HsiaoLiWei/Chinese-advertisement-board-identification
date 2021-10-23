@@ -1,3 +1,10 @@
+'''
+Modified Date: 2021/10/23
+
+Author: Li-Wei Hsiao
+
+mail: nfsmw308@gmail.com
+'''
 from torch import nn
 from efficientnet_pytorch import EfficientNet
 
