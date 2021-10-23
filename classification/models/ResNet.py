@@ -1,3 +1,10 @@
+'''
+Modified Date: 2021/10/23
+
+Author: Li-Wei Hsiao
+
+mail: nfsmw308@gmail.com
+'''
 import math
 import torch
 from torch import nn
