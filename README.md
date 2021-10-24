@@ -35,7 +35,7 @@
 |:----------:|:----------:|:----------:|:----------:|:----------:|
 | ResNeXt50+ResNeXt101|      0.82532|       0.9894|       0.9046|       0.8359|
 | ResNeXt50+ResNeXt101+SEResNet101|      0.86804|       0.9737|       0.9759|       0.8943|
-| ResNeXt50+ResNeXt101+SEResNet101+EfficientNet-b5|      0.87167|       0.9740|       0.9807|       0.8112|
+| ResNeXt50+ResNeXt101+SEResNet101+EfficientNet-b5|      **0.87167**|       **0.9740**|       **0.9807**|       **0.8977**|
 
 - Private dataset ensemble 的上傳分數  
 
@@ -43,7 +43,7 @@
 |:----------:|:----------:|:----------:|:----------:|:----------:|
 | ResNeXt50+ResNeXt101+SEResNet101|      0.8682|       0.9718|       0.9782|       0.8964|
 | ResNeXt50+ResNeXt101+EfficientNet-b5|      0.8727|       0.9718|       0.9782|       0.9009|
-| ResNeXt50+ResNeXt101+SEResNet101+EfficientNet-b5|      0.8741|       0.9718|       0.9782|       0.9023|
+| ResNeXt50+ResNeXt101+SEResNet101+EfficientNet-b5|      **0.8741**|       **0.9718**|       **0.9782**|       **0.9023**|
 
 # Computer equipment
 System environment: Windows10、Ubuntu20.04
