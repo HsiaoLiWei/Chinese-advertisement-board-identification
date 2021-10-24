@@ -102,6 +102,7 @@ image 10/12 example\img_10017_1.png: 480x64 7 Texts, Done. (0.917s) 國立臺灣
 image 11/12 example\img_10028_5.png: 160x480 3 Texts, Done. (0.399s) 薑母鴨
 image 12/12 example\img_10028_6.png: 480x128 3 Texts, Done. (0.411s) 薑母鴨
 ```
+- Text classification的模型沒有加入EfficientNet-b5，若想要使用的話，需要自行解註解與修改程式
 
 # References
 [1] https://github.com/ultralytics/yolov5  
