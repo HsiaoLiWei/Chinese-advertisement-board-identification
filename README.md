@@ -9,7 +9,7 @@ GPU: NVIDIA GeForce RTX 2060 6GB
 
 Training:
 CPU: Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz
-RAM: 128GB
+RAM: 256GB
 GPU: NVIDIA GeForce RTX 3090 24GB
 
 # Pretrain models
