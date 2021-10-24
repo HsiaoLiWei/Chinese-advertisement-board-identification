@@ -1,4 +1,4 @@
-# Chinese-advertisement-board-identification(Pytorch)  
+# Chinese-Advertisement-Board-Identification(Pytorch)  
 - Competition URL : https://tbrain.trendmicro.com.tw/Competitions/Details/16  
 
 # 1.Demo
