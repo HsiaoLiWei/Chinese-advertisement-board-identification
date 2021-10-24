@@ -5,11 +5,9 @@
 # 1.Demo
 - 四點校正
 
-| Input |
-|:----------:|
-|<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img_10065.jpg" width=50% height=50%>|
-| transform |
-|<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img_10065_transform.jpg" width=50% height=50%>|
+| Input | transform |
+|:----------:|:----------:|
+|<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img_10065.jpg" width=50% height=50%>|<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img_10065_transform.jpg" width=50% height=50%>|
 
 - 模型預測結果
 
