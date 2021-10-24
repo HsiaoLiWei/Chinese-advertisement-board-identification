@@ -1,4 +1,4 @@
-# Chinese-advertisement-board-identification
+# Chinese-advertisement-board-identification(Pytorch)
 中文廣告刊板之中文字辨識，搭配yoloV5抓取ROI中的中文單字位置後，辨識中文單字  
 競賽連結:https://tbrain.trendmicro.com.tw/Competitions/Details/16  
 
