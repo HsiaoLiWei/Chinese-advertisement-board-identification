@@ -16,11 +16,14 @@ RAM: 256GB
 GPU: NVIDIA GeForce RTX 3090 24GB  
 
 # Download Pretrain models
-將訓練好的yoloV5 m 模型下載後，放到 ./yoloV5/runs/train/expm/weights/
-https://drive.google.com/drive/folders/1cfoWKvoh9zOzg0njvs1WJOOrnhqiZsY5?usp=sharing
+將訓練好的yoloV5 m 模型下載後，放到 ./yoloV5/runs/train/expm/weights/  
+https://drive.google.com/drive/folders/1cfoWKvoh9zOzg0njvs1WJOOrnhqiZsY5?usp=sharing  
 
-將訓練好的classification模型下載後，放到 ./classification/private_model/
-https://drive.google.com/drive/folders/1CBMReE3JznmqY9cujOODxZVkvzaPpjVb?usp=sharing
+將訓練好的classification模型下載後，放到 ./classification/private_model/  
+https://drive.google.com/drive/folders/1CBMReE3JznmqY9cujOODxZVkvzaPpjVb?usp=sharing  
+
+將官方提供的yoloV5預訓練模型下載放到./yoloV5/  
+
 
 # Testing
 先將路徑移到yoloV5底下
