@@ -8,8 +8,8 @@
 - 我的 Propose methmod 是將訓練模型導入Argmargin + Focal loss計算模型的loss，SEResNet101跟EfficientNet在比賽截止前還沒訓練結束，所以上面的數據是把第46個epoch結果放上去而已，說不定效果會更好
 
 - Public dataset 的上傳分數
-| Model type          | Loss function | Final score | Precision   |  Recall     | Normalization Edit Distance(N.E.D.)        |  
-| ------------------- | ----------:   | ----------: | ----------: | ----------: | ----------: |  
+| Model type | Loss function | Final score | Precision | Recall | Normalization Edit Distance(N.E.D.)|  
+| :------------------- | ----------:   | ----------: | ----------: | ----------: | ----------: |  
 | ResNeXt50           | Cross entropy |      0.69742|       0.9447|       0.8884|       0.7527|  
 | ResNeXt101          | Cross entropy |      0.71608|       0.9631|       0.9076|       0.7530|  
 | SEResNet101         | Cross entropy |      0.80967|       0.9984|       0.9027|       0.8112|  
