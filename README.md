@@ -46,34 +46,34 @@
 | ResNeXt50+ResNeXt101+SEResNet101+EfficientNet-b5|      **0.8741**|       **0.9718**|       **0.9782**|       **0.9023**|
 
 # 3.Computer equipment
-System environment: Windows10、Ubuntu20.04
+- System: Windows10、Ubuntu20.04
 
-Testing:  
+- Testing:  
 CPU: Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz  
 RAM: 16GB  
 GPU: NVIDIA GeForce RTX 2060 6GB  
 
-Training:  
+- Training:  
 CPU: Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz  
 RAM: 256GB  
 GPU: NVIDIA GeForce RTX 3090 24GB  
 
 # 4.Download Pretrain models
-將訓練好的yoloV5 m 模型下載後，放到 ./yoloV5/runs/train/expm/weights/  
+- 將訓練好的yoloV5 m 模型下載後，放到 ./yoloV5/runs/train/expm/weights/  
 https://drive.google.com/drive/folders/1cfoWKvoh9zOzg0njvs1WJOOrnhqiZsY5?usp=sharing  
 
-將訓練好的classification模型下載後，放到 ./classification/private_model/  
+- 將訓練好的classification模型下載後，放到 ./classification/private_model/  
 https://drive.google.com/drive/folders/1CBMReE3JznmqY9cujOODxZVkvzaPpjVb?usp=sharing  
 
-將官方提供的yoloV5預訓練模型下載放到./yoloV5/  
+- 將官方提供的yoloV5預訓練模型下載放到./yoloV5/  
 https://drive.google.com/drive/folders/1Ykd3-PxwKFrqryjAGKNiVP6eIvV5yu9r?usp=sharing
 
 # 5.Testing
-先將路徑移到yoloV5底下
+- 先將路徑移到yoloV5底下
 ```bash
 $ cd ./yoloV5
 ```
-執行 Text_detection.py 檔案前，請先載好pretrain model，模型輸入圖片請放在 ./yoloV5/example/ 底下，example資料夾底下有圖片範例，執行結束後，預測結果會存在 ./yoloV5/out/，檔名後面會有預測結果，如果是沒有單字或判斷不清楚，會給###，如果有文字，就會顯示預測結果
+- 執行 Text_detection.py 檔案前，請先載好pretrain model，模型輸入圖片請放在 ./yoloV5/example/ 底下，example資料夾底下有圖片範例，執行結束後，預測結果會存在 ./yoloV5/out/，檔名後面會有預測結果，如果是沒有單字或判斷不清楚，會給###，如果有文字，就會顯示預測結果
 ```bash
 $ python3 Text_detection.py
 
