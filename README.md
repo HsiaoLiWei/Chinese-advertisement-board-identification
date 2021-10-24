@@ -5,7 +5,7 @@
 # Demo
 
 | Input | YoloV5 Text detection | Text classification |
-|:----------:|:----------:|:----------:|:----------|
+|:----------:|:----------:|:----------|
 |![image](https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/yoloV5/example/img_10000_3.png)|![image](https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/yoloV5/out/img_10000_3_%E9%9B%BB%E6%A9%9F%E5%86%B7%E6%B0%A3%E6%AA%A2%E9%A9%97.png)|電機冷氣檢驗|
 
 
