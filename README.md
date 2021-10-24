@@ -2,8 +2,10 @@
 - Competition URL : https://tbrain.trendmicro.com.tw/Competitions/Details/16  
 
 # 1.Propose method
-
-<img src="https://drive.google.com/file/d/19OoWqzUEVLhpMso6osvOHFjf-ZvV_PUL/view?usp=sharing" width=50% height=50%>
+- 我們針對官方給定的四點座標，先做四點校正(points tranforms)演算法，使用此演算法的原因是為了得到轉正的圖片，讓字體面積更大，也能讓模型更好的預測結果。校正好字串的圖片後，用已訓練好的Yolov5模型預測單字框的位置，框選出單字位置後，使用單字框排序(Sort Box location)演算法，排出所有文字的順序，這樣一來，找出的字串就不會有順序不對的問題，也可以透過Yolov5過濾到許多沒文字的圖片。接下來針對所有的單字框做兩種分類，第一種分類是否是文字，若不是文字，直接標出"###"; 若是文字，則使用單字分類器辨識文字
+<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img/modelall.png" width=30% height=30%>
+- 這是我們提出來用於在CNN上能更準確分辨出文字的訓練方式，透過ArcMargin 、 FCN and Focal loss這兩者loss決定Backend，讓模型更能將特徵的差異性分辨更好
+<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img/modelclass.png" width=30% height=30%>
 
 # 2.Demo
 - Four points transformation
