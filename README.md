@@ -23,7 +23,7 @@ https://drive.google.com/drive/folders/1cfoWKvoh9zOzg0njvs1WJOOrnhqiZsY5?usp=sha
 https://drive.google.com/drive/folders/1CBMReE3JznmqY9cujOODxZVkvzaPpjVb?usp=sharing  
 
 將官方提供的yoloV5預訓練模型下載放到./yoloV5/  
-
+https://drive.google.com/drive/folders/1Ykd3-PxwKFrqryjAGKNiVP6eIvV5yu9r?usp=sharing
 
 # Testing
 先將路徑移到yoloV5底下
