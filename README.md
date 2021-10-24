@@ -1,16 +1,17 @@
 # Chinese-advertisement-board-identification
-中文廣告刊板之中文字辨識，搭配yoloV5抓取ROI中的中文單字位置後，辨識中文單字
+中文廣告刊板之中文字辨識，搭配yoloV5抓取ROI中的中文單字位置後，辨識中文單字  
+競賽連結:https://tbrain.trendmicro.com.tw/Competitions/Details/16  
 
 # Computer equipment
-Testing:
-CPU: Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz
-RAM: 16GB
-GPU: NVIDIA GeForce RTX 2060 6GB
+Testing:  
+CPU: Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz  
+RAM: 16GB  
+GPU: NVIDIA GeForce RTX 2060 6GB  
 
-Training:
-CPU: Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz
-RAM: 256GB
-GPU: NVIDIA GeForce RTX 3090 24GB
+Training:  
+CPU: Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz  
+RAM: 256GB  
+GPU: NVIDIA GeForce RTX 3090 24GB  
 
 # Download Pretrain models
 將訓練好的yoloV5 m 模型下載後，放到 ./yoloV5/runs/train/expm/weights/
