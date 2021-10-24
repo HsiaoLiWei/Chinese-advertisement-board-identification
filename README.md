@@ -1,7 +1,11 @@
 # Chinese-Advertisement-Board-Identification(Pytorch)  
 - Competition URL : https://tbrain.trendmicro.com.tw/Competitions/Details/16  
 
-# 1.Demo
+# 1.Propose method
+
+<img src="https://drive.google.com/file/d/19OoWqzUEVLhpMso6osvOHFjf-ZvV_PUL/view?usp=sharing" width=50% height=50%>
+
+# 2.Demo
 - Four points transformation
 
 | Input image | After transformation |
@@ -19,7 +23,7 @@
 |<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/yoloV5/example/img_10005_6.png" width=30% height=30%>|<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/yoloV5/out/img_10005_6_%23%23%23.png" width=30% height=30%>|###|
 |<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/yoloV5/example/img_10005_8.png" width=30% height=30%>|<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/yoloV5/out/img_10005_8_%23%23%23.png" width=30% height=30%>|###|
 
-# 2.Competition results
+# 3.Competition results
 - Our proposed method combined the training model with ArcMargin and Focal loss
 - The training of the two models, SEResNet101 and EfficientNet, has not ended before the end of the competition. Therefore, the above results which are the 46th epoch could be more accurately
 
@@ -52,7 +56,7 @@
 | ResNeXt50+ResNeXt101<br>+EfficientNet-b5|      0.8727|       0.9718|       0.9782|       0.9009|
 | ResNeXt50+ResNeXt101<br>+SEResNet101+EfficientNet-b5|      **0.8741**|       **0.9718**|       **0.9782**|       **0.9023**|
 
-# 3.Computer equipment
+# 4.Computer equipment
 - System: Windows10、Ubuntu20.04
 - Pytorch version: Pytorch 1.7 or higher
 - Python version: Python 3.6
@@ -66,7 +70,7 @@ CPU: Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz
 RAM: 256GB  
 GPU: NVIDIA GeForce RTX 3090 24GB  
 
-# 4.Download pretrained models
+# 5.Download pretrained models
 - After downloading the pre-trained model of YoLoV5(m), put the model on the path "./yoloV5/runs/train/expm/weights/".
 https://drive.google.com/drive/folders/1cfoWKvoh9zOzg0njvs1WJOOrnhqiZsY5?usp=sharing  
 
@@ -76,7 +80,7 @@ https://drive.google.com/drive/folders/1CBMReE3JznmqY9cujOODxZVkvzaPpjVb?usp=sha
 - Download the model which is provided by the official, then put the model on the path "./yoloV5/". 
 https://drive.google.com/drive/folders/1Ykd3-PxwKFrqryjAGKNiVP6eIvV5yu9r?usp=sharing
 
-# 5.Testing
+# 6.Testing
 ## Model evaulation -- Get the predicted results by inputting images
 - First, move your path to the "yoloV5"
 ```bash
