@@ -386,6 +386,10 @@ def private_img_get_preprocess():
         oriPath = path
     np.savetxt('./dataset/private.txt', eval_save_txt, fmt='%s')
 
+def image_transform():
+    img = cv2.imread('./img_10065.jpg')
+    out = four_point_transform(img, np.array([ [169,593],[1128,207],[1166,411],[142,723] ]))
+    cv2.imwrite('./img_10065_transform.jpg', out)
 
 if __name__ in "__main__":
     train_valid_get_imageClassification()   # 生成的資料庫辨識是否是文字的 function
@@ -393,4 +397,4 @@ if __name__ in "__main__":
     train_Text_detection_get_bbox()         # 生成的資料庫判斷文字位置的 function
     private_img_get_preprocess()            # 生成預處理的資料庫，之後利用 yolo 抓出char位置，最後放入模型辨識
     # test_bbox()                             # 查看BBOX有沒有抓對
-    
+    # image_transform()                       # 將輸入圖片與要截取的四邊座標轉成正面
