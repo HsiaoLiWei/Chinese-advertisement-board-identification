@@ -20,7 +20,7 @@
 |<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/yoloV5/example/img_10005_8.png" width=30% height=30%>|<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/yoloV5/out/img_10005_8_%23%23%23.png" width=30% height=30%>|###|
 
 # 2.Competition results
-- Our proposed method combined the training model with Argmargin and Focal loss
+- Our proposed method combined the training model with ArgMargin and Focal loss
 - The training of the two models, SEResNet101 and EfficientNet, has not ended before the end of the competition. Therefore, the above results which are the 46th epoch maybe more accurately
 
 - Final score = 1_N.E.D - (1 - Precision)
