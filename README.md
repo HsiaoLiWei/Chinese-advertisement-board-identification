@@ -2,6 +2,36 @@
 中文廣告刊板之中文字辨識，搭配yoloV5抓取ROI中的中文單字位置後，辨識中文單字  
 競賽連結:https://tbrain.trendmicro.com.tw/Competitions/Details/16  
 
+# Demo
+
+# Inference
+- 我的 Propose methmod 是將訓練模型導入Argmargin + Focal loss計算模型的loss，SEResNet101跟EfficientNet在比賽截止前還沒訓練結束，所以上面的數據是把第46個epoch結果放上去而已，說不定效果會更好
+
+- Public dataset 的上傳分數
+| Model type          | Loss function | Final score | Precision   |  Recall     | Normalization Edit Distance(N.E.D.)        |
+| ------------------- | ----------:   | ----------: | ----------: | ----------: | ----------: |
+| ResNeXt50           | Cross entropy |      0.69742|       0.9447|       0.8884|       0.7527|
+| ResNeXt101          | Cross entropy |      0.71608|       0.9631|       0.9076|       0.7530|
+| SEResNet101         | Cross entropy |      0.80967|       0.9984|       0.9027|       0.8112|
+| SEResNet101         | Focal loss(γ=2) |    0.82015|       0.9986|       0.9032|       0.8215|
+| SEResNet101         | Focal loss(γ=2) + Cross entropy | 0.85237|       0.9740|       0.9807|       0.8784|
+| EfficientNet-b5     | Focal loss(γ=2) + Cross entropy | 0.82234|       0.9797|       0.9252|      0.8426|
+
+- Public dataset ensemble 的上傳分數
+| Model type          | Final score | Precision   |  Recall     | Normalization Edit Distance(N.E.D.)        |
+| ------------------- | ----------: | ----------: | ----------: | ----------: |
+| ResNeXt50+ResNeXt101           |      0.82532|       0.9894|       0.9046|       0.8359|
+| ResNeXt50+ResNeXt101+SEResNet101          |      0.86804|       0.9737|       0.9759|       0.8943|
+| ResNeXt50+ResNeXt101+SEResNet101+EfficientNet-b5         |      0.87167|       0.9740|       0.9807|       0.8112|
+
+
+- Private dataset ensemble 的上傳分數
+| Model type          | Final score | Precision   |  Recall     | Normalization Edit Distance(N.E.D.)        |
+| ------------------- | ----------: | ----------: | ----------: | ----------: |
+| ResNeXt50+ResNeXt101+SEResNet101           |      0.8682|       0.9718|       0.9782|       0.8964|
+| ResNeXt50+ResNeXt101+EfficientNet-b5          |      0.8727|       0.9718|       0.9782|       0.9009|
+| ResNeXt50+ResNeXt101+SEResNet101+EfficientNet-b5         |      0.8741|       0.9718|       0.9782|       0.9023|
+
 # Computer equipment
 System environment: Windows10、Ubuntu20.04
 
