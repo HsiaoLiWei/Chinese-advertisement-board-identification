@@ -12,7 +12,7 @@ CPU: Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz
 RAM: 256GB
 GPU: NVIDIA GeForce RTX 3090 24GB
 
-# Pretrain models
+# Download Pretrain models
 將訓練好的yoloV5 m 模型下載後，放到 ./yoloV5/runs/train/expm/weights/
 https://drive.google.com/drive/folders/1cfoWKvoh9zOzg0njvs1WJOOrnhqiZsY5?usp=sharing
 
