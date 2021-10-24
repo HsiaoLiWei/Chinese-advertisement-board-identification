@@ -1,17 +1,16 @@
-# Chinese-advertisement-board-identification(Pytorch)
-- 中文廣告刊板之中文字辨識，搭配yoloV5抓取ROI中的中文單字位置後，辨識中文單字  
+# Chinese-advertisement-board-identification(Pytorch)  
 - Competition URL : https://tbrain.trendmicro.com.tw/Competitions/Details/16  
 
 # 1.Demo
 - Four points transformation
 
-| Input | transform |
+| Input image | After transformation |
 |:----------:|:----------:|
 |<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img_10065.jpg" width=50% height=50%>|<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img_10065_transform.jpg" width=50% height=50%>|
 
 - Predicted results
 
-| Input | YoloV5 Text detection | Text classification |
+| Input image | YoloV5 Text detection | Text classification |
 |:----------:|:----------:|:----------|
 |![image](https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/yoloV5/example/img_10000_3.png)|![image](https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/yoloV5/out/img_10000_3_%E9%9B%BB%E6%A9%9F%E5%86%B7%E6%B0%A3%E6%AA%A2%E9%A9%97.png)|電機冷氣檢驗|
 |<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/yoloV5/example/img_10013_3.png" width=20% height=20%>|<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/yoloV5/out/img_10013_3_%E7%A5%A5%E6%BA%96%E9%90%98%E9%8C%B6%E6%99%82%E8%A8%88.png" width=20% height=20%>|祥準鐘錶時計|
@@ -20,8 +19,9 @@
 |<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/yoloV5/example/img_10005_6.png" width=30% height=30%>|<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/yoloV5/out/img_10005_6_%23%23%23.png" width=30% height=30%>|###|
 |<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/yoloV5/example/img_10005_8.png" width=30% height=30%>|<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/yoloV5/out/img_10005_8_%23%23%23.png" width=30% height=30%>|###|
 
-# 2.Inference
-- Our proposed method combined the training model with Argmargin and Focal loss，SEResNet101跟EfficientNet在比賽截止前還沒訓練結束，所以上面的數據是把第46個epoch結果放上去而已，說不定效果會更好  
+# 2.competition results
+- Our proposed method combined the training model with Argmargin and Focal loss
+- The training of the two models, SEResNet101 and EfficientNet, has not ended before the end of the competition. Therefore, the above results which are the 46th epoch maybe more accurately
 
 - Final score = 1_N.E.D - (1 - Precision)
 - Arc Focal loss = ArcMargin + Focal loss(γ=2) 、 Class Focal loss = FCN + Focal loss(γ=1.5)
