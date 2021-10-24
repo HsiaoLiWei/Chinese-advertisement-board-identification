@@ -1,15 +1,15 @@
 # Chinese-advertisement-board-identification(Pytorch)
 - 中文廣告刊板之中文字辨識，搭配yoloV5抓取ROI中的中文單字位置後，辨識中文單字  
-- 競賽連結:https://tbrain.trendmicro.com.tw/Competitions/Details/16  
+- Competition URL : https://tbrain.trendmicro.com.tw/Competitions/Details/16  
 
 # 1.Demo
-- 四點校正
+- Four points transformation
 
 | Input | transform |
 |:----------:|:----------:|
 |<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img_10065.jpg" width=50% height=50%>|<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img_10065_transform.jpg" width=50% height=50%>|
 
-- 模型預測結果
+- Predicted results
 
 | Input | YoloV5 Text detection | Text classification |
 |:----------:|:----------:|:----------|
@@ -21,11 +21,11 @@
 |<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/yoloV5/example/img_10005_8.png" width=30% height=30%>|<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/yoloV5/out/img_10005_8_%23%23%23.png" width=30% height=30%>|###|
 
 # 2.Inference
-- 我的 Propose methmod 是將訓練模型導入Argmargin + Focal loss計算模型的loss，SEResNet101跟EfficientNet在比賽截止前還沒訓練結束，所以上面的數據是把第46個epoch結果放上去而已，說不定效果會更好  
+- Our proposed method combined the training model with Argmargin and Focal loss，SEResNet101跟EfficientNet在比賽截止前還沒訓練結束，所以上面的數據是把第46個epoch結果放上去而已，說不定效果會更好  
 
 - Final score = 1_N.E.D - (1 - Precision)
 - Arc Focal loss = ArcMargin + Focal loss(γ=2) 、 Class Focal loss = FCN + Focal loss(γ=1.5)
-- Public dataset 的上傳分數 
+- Public dataset scores 
 
 | Model type | Loss function | Final score | Precision | Recall | Normalization Edit Distance(N.E.D.)|
 |:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|
@@ -36,7 +36,7 @@
 | SEResNet101| Arc Focal loss(γ=2)<br>+ Class Focal loss(γ=1.5) | 0.85237|       0.9740|       0.9807|       0.8784|
 | EfficientNet-b5| Arc Focal loss(γ=2)<br>+ Class Focal loss(γ=1.5) | 0.82234|       0.9797|       0.9252|      0.8426|
 
-- Public dataset ensemble 的上傳分數  
+- Public dataset ensemble scores   
 
 | Model type | Final score | Precision | Recall | Normalization Edit Distance(N.E.D.) |
 |:----------:|:----------:|:----------:|:----------:|:----------:|
@@ -44,7 +44,7 @@
 | ResNeXt50+ResNeXt101<br>+SEResNet101|      0.86804|       0.9737|       0.9759|       0.8943|
 | ResNeXt50+ResNeXt101<br>+SEResNet101+EfficientNet-b5|      **0.87167**|       **0.9740**|       **0.9807**|       **0.8977**|
 
-- Private dataset ensemble 的上傳分數  
+- Private dataset ensemble scores   
 
 | Model type | Final score | Precision | Recall | Normalization Edit Distance(N.E.D.) |
 |:----------:|:----------:|:----------:|:----------:|:----------:|
@@ -54,7 +54,7 @@
 
 # 3.Computer equipment
 - System: Windows10、Ubuntu20.04
-- Pytorch version: Pytorch 1.7 and higher
+- Pytorch version: Pytorch 1.7 or higher
 - Python version: Python 3.6
 - Testing:  
 CPU: Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz  
@@ -66,23 +66,24 @@ CPU: Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz
 RAM: 256GB  
 GPU: NVIDIA GeForce RTX 3090 24GB  
 
-# 4.Download Pretrain models
-- 將訓練好的yoloV5 m 模型下載後，放到 ./yoloV5/runs/train/expm/weights/  
+# 4.Download pretrained models
+- After downloading the pre-trained model of YoLoV5(m), put the model on the path "./yoloV5/runs/train/expm/weights/".
 https://drive.google.com/drive/folders/1cfoWKvoh9zOzg0njvs1WJOOrnhqiZsY5?usp=sharing  
 
-- 將訓練好的classification模型下載後，放到 ./classification/private_model/  
+- After downloading the pre-trained model of classification，put the model on the path "./classification/private_model/".
 https://drive.google.com/drive/folders/1CBMReE3JznmqY9cujOODxZVkvzaPpjVb?usp=sharing  
 
-- 將官方提供的yoloV5預訓練模型下載放到./yoloV5/  
+- Download the model which is provided by the official, then put the model on the path "./yoloV5/". 
 https://drive.google.com/drive/folders/1Ykd3-PxwKFrqryjAGKNiVP6eIvV5yu9r?usp=sharing
 
 # 5.Testing
-## 模型驗證，輸入圖片得到預測結果
-- 先將路徑移到yoloV5底下
+## Model evaulation -- Get the predicted results by inputting images
+- First, move your path to the yoloV5
 ```bash
 $ cd ./yoloV5
 ```
-- 執行 Text_detection.py 檔案前，請先載好pretrain model，模型輸入圖片請放在 ./yoloV5/example/ 底下，example資料夾底下有圖片範例，執行結束後，預測結果會存在 ./yoloV5/out/，檔名後面會有預測結果，如果是沒有單字或判斷不清楚，會給###，如果有文字，就會顯示預測結果
+- Please download the pre-trained model before you run "Text_detection.py" file. Then, put your images under the path "./yoloV5/example/".
+- There are some examples under the folder "example". The predicted results will save on the path "./yoloV5/out/" after you run the code. The predicted results are on the back of filename. If no words or the images are not clear enough, the model will predict "###". Otherwise, it will show the predicted results.
 ```bash
 $ python3 Text_detection.py
 
@@ -102,7 +103,7 @@ image 11/12 example\img_10028_5.png: 160x480 3 Texts, Done. (0.399s) 薑母鴨
 image 12/12 example\img_10028_6.png: 480x128 3 Texts, Done. (0.411s) 薑母鴨
 ```
 
-# Reference
+# References
 [1] https://github.com/ultralytics/yolov5  
 [2] https://github.com/pytorch/vision/blob/main/torchvision/models/resnet.py  
 [3] https://github.com/lukemelas/EfficientNet-PyTorch  
