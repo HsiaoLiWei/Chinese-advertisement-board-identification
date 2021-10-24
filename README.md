@@ -47,7 +47,8 @@
 
 # 3.Computer equipment
 - System: Windows10、Ubuntu20.04
-
+- Pytorch version: Pytorch 1.7 and higher
+- Python version: Python 3.6
 - Testing:  
 CPU: Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz  
 RAM: 16GB  
