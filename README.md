@@ -46,4 +46,9 @@ image 10/12 example\img_10017_1.png: 480x64 7 Texts, Done. (0.917s) 國立臺灣
 image 11/12 example\img_10028_5.png: 160x480 3 Texts, Done. (0.399s) 薑母鴨
 image 12/12 example\img_10028_6.png: 480x128 3 Texts, Done. (0.411s) 薑母鴨
 ```
-
+# Reference
+[1] https://github.com/ultralytics/yolov5
+[2] https://github.com/pytorch/vision/blob/main/torchvision/models/resnet.py
+[3] https://github.com/lukemelas/EfficientNet-PyTorch
+[4] https://www.pyimagesearch.com/2014/08/25/4-point-opencv-getperspective-transform-example/
+[5] https://tw511.com/a/01/30937.html
