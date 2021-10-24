@@ -24,7 +24,7 @@
 - 我的 Propose methmod 是將訓練模型導入Argmargin + Focal loss計算模型的loss，SEResNet101跟EfficientNet在比賽截止前還沒訓練結束，所以上面的數據是把第46個epoch結果放上去而已，說不定效果會更好  
 
 - Final score = 1_N.E.D - (1 - Precision)
-
+- Arc Focal loss = ArcMargin + Focal loss(γ=2) 、 Class Focal loss = FCN + Focal loss(γ=1.5)
 - Public dataset 的上傳分數 
 
 | Model type | Loss function | Final score | Precision | Recall | Normalization Edit Distance(N.E.D.)|
@@ -33,8 +33,8 @@
 | ResNeXt101 | Cross entropy |      0.71608|       0.9631|       0.9076|       0.7530|
 | SEResNet101| Cross entropy |      0.80967|       0.9984|       0.9027|       0.8112|
 | SEResNet101| Focal loss(γ=2) |    0.82015|       0.9986|       0.9032|       0.8215|
-| SEResNet101| Focal loss(γ=2) + Cross entropy | 0.85237|       0.9740|       0.9807|       0.8784|
-| EfficientNet-b5| Focal loss(γ=2) + Cross entropy | 0.82234|       0.9797|       0.9252|      0.8426|
+| SEResNet101| Arc Focal loss(γ=2)<br>+ Class Focal loss(γ=1.5) | 0.85237|       0.9740|       0.9807|       0.8784|
+| EfficientNet-b5| Arc Focal loss(γ=2)<br>+ Class Focal loss(γ=1.5) | 0.82234|       0.9797|       0.9252|      0.8426|
 
 - Public dataset ensemble 的上傳分數  
 
