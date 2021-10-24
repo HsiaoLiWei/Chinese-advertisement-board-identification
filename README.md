@@ -78,7 +78,7 @@ https://drive.google.com/drive/folders/1Ykd3-PxwKFrqryjAGKNiVP6eIvV5yu9r?usp=sha
 
 # 5.Testing
 ## Model evaulation -- Get the predicted results by inputting images
-- First, move your path to the yoloV5
+- First, move your path to the "yoloV5"
 ```bash
 $ cd ./yoloV5
 ```
