@@ -2,7 +2,7 @@
 中文廣告刊板之中文字辨識，搭配yoloV5抓取ROI中的中文單字位置後，辨識中文單字  
 競賽連結:https://tbrain.trendmicro.com.tw/Competitions/Details/16  
 
-# Demo
+# 1.Demo
 
 | Input | YoloV5 Text detection | Text classification |
 |:----------:|:----------:|:----------|
@@ -13,7 +13,7 @@
 |![image](https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/yoloV5/example/img_10005_6.png)|![image](https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/yoloV5/out/img_10005_6_%23%23%23.png)|###|
 |![image](https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/yoloV5/example/img_10005_8.png)|![image](https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/yoloV5/out/img_10005_8_%23%23%23.png)|###|
 
-# Inference
+# 2.Inference
 - 我的 Propose methmod 是將訓練模型導入Argmargin + Focal loss計算模型的loss，SEResNet101跟EfficientNet在比賽截止前還沒訓練結束，所以上面的數據是把第46個epoch結果放上去而已，說不定效果會更好  
 
 - Final score = 1_N.E.D - (1 - Precision)
@@ -45,7 +45,7 @@
 | ResNeXt50+ResNeXt101+EfficientNet-b5|      0.8727|       0.9718|       0.9782|       0.9009|
 | ResNeXt50+ResNeXt101+SEResNet101+EfficientNet-b5|      **0.8741**|       **0.9718**|       **0.9782**|       **0.9023**|
 
-# Computer equipment
+# 3.Computer equipment
 System environment: Windows10、Ubuntu20.04
 
 Testing:  
@@ -58,7 +58,7 @@ CPU: Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz
 RAM: 256GB  
 GPU: NVIDIA GeForce RTX 3090 24GB  
 
-# Download Pretrain models
+# 4.Download Pretrain models
 將訓練好的yoloV5 m 模型下載後，放到 ./yoloV5/runs/train/expm/weights/  
 https://drive.google.com/drive/folders/1cfoWKvoh9zOzg0njvs1WJOOrnhqiZsY5?usp=sharing  
 
@@ -68,7 +68,7 @@ https://drive.google.com/drive/folders/1CBMReE3JznmqY9cujOODxZVkvzaPpjVb?usp=sha
 將官方提供的yoloV5預訓練模型下載放到./yoloV5/  
 https://drive.google.com/drive/folders/1Ykd3-PxwKFrqryjAGKNiVP6eIvV5yu9r?usp=sharing
 
-# Testing
+# 5.Testing
 先將路徑移到yoloV5底下
 ```bash
 $ cd ./yoloV5
