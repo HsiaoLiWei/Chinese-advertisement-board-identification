@@ -17,11 +17,16 @@
 |<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img/%E5%8E%9F%E5%9C%96.jpg" width=50% height=50%>|<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img/Mosaic2.jpg" width=50% height=50%>|<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img/Mosaic4.jpg" width=50% height=50%>|<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img/Mosaic6.jpg" width=50% height=50%>|<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img/Mosaic8.jpg" width=50% height=50%>|
 
 - Random scale Resize
-- 
+
 | Input image | 56x56 to 224x224 | 38x38 to 224x224 | 28x28 to 224x224 | 18x18 to 224x224 |
 |:----------:|:----------:|:----------:|:----------:|:----------:|
 |<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img/%E5%8E%9F%E5%9C%96.jpg" width=50% height=50%>|<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img/56_56.jpg" width=50% height=50%>|<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img/38_38.jpg" width=50% height=50%>|<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img/28_28.jpg" width=50% height=50%>|<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img/18_18.jpg" width=50% height=50%>|
 
+- Random ColorJitter
+
+| Input image | brightness=0.5 | contrast=0.5 | saturation=0.5 | hue=0.5 | brightness=0.5  contrast=0.5  saturation=0.5  hue=0.5 |
+|:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|
+|<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img/%E5%8E%9F%E5%9C%96.jpg" width=50% height=50%>|<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img/brightness.jpg" width=50% height=50%>|<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img/contrast.jpg" width=50% height=50%>|<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img/saturation.jpg" width=50% height=50%>|<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img/hue.jpg" width=50% height=50%>|<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img/ColorJitter.jpg" width=50% height=50%>|
 
 # 2.Demo
 - Four points transformation
