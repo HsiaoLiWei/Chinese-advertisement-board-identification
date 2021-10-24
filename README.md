@@ -3,6 +3,13 @@
 - 競賽連結:https://tbrain.trendmicro.com.tw/Competitions/Details/16  
 
 # 1.Demo
+- 四點校正
+
+| Input | transform |
+|:----------:|:----------:|
+|![image](https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img_10065.jpg)||![image](https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img_10065_transform.jpg)|
+
+- 模型預測結果
 
 | Input | YoloV5 Text detection | Text classification |
 |:----------:|:----------:|:----------|
