@@ -50,9 +50,9 @@ image 12/12 example\img_10028_6.png: 480x128 3 Texts, Done. (0.411s) 薑母鴨
 [1] https://github.com/ultralytics/yolov5  
 [2] https://github.com/pytorch/vision/blob/main/torchvision/models/resnet.py  
 [3] https://github.com/lukemelas/EfficientNet-PyTorch  
-[4] https://www.pyimagesearch.com/2014/08/25/4-point-opencv-getperspective-transform-example/  
-[5] https://tw511.com/a/01/30937.html  
-[6] https://github.com/ronghuaiyang/arcface-pytorch/blob/master/models/metrics.py  
+[4] https://github.com/ronghuaiyang/arcface-pytorch/blob/master/models/metrics.py  
+[5] https://www.pyimagesearch.com/2014/08/25/4-point-opencv-getperspective-transform-example/  
+[6] https://tw511.com/a/01/30937.html  
 [7] Deng, J., Guo, J., Xue, N., & Zafeiriou, S. (2019). Arcface: Additive angular margin loss for deep face recognition. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 4690-4699).  
 [8] Hu, J., Shen, L., & Sun, G. (2018). Squeeze-and-excitation networks. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 7132-7141).  
 [9] Xie, S., Girshick, R., Dollár, P., Tu, Z., & He, K. (2017). Aggregated residual transformations for deep neural networks. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 1492-1500).  
