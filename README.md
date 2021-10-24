@@ -7,9 +7,9 @@
 
 | Input |
 |:----------:|
-|![image](https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img_10065.jpg)|
+|![image](https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img_10065.jpg){:height="50%" width="50%"}|
 | transform |
-|![image](https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img_10065_transform.jpg)|
+|![image](https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img_10065_transform.jpg){:height="50%" width="50%"}|
 
 - 模型預測結果
 
