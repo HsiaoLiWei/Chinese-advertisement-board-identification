@@ -8,8 +8,10 @@
 
 - 這是我們提出來用於在CNN上能更準確分辨出文字的訓練方式，透過ArcMargin 、 FCN and Focal loss這兩者loss決定Backend，讓模型更能將特徵的差異性分辨更好，CNN的部份只要是分類架構都可以替換
 <img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img/modelclass.png" width=25% height=25%>
+
 ## Data augmentation
 - Random Mosaic
+
 | Input image | Mosaic size = 2 | Mosaic size = 4 | Mosaic size = 6 | Mosaic size = 8 |
 |:----------:|:----------:|:----------:|:----------:|:----------:|
 |<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img/%E5%8E%9F%E5%9C%96.jpg" width=50% height=50%>|<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img/Mosaic2.jpg" width=50% height=50%>|<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img/Mosaic4.jpg" width=50% height=50%>|<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img/Mosaic6.jpg" width=50% height=50%>|<img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img/Mosaic8.jpg" width=50% height=50%>|
