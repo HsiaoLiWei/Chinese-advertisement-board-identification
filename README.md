@@ -3,6 +3,8 @@
 競賽連結:https://tbrain.trendmicro.com.tw/Competitions/Details/16  
 
 # Computer equipment
+System environment: Windows10、Ubuntu20.04
+
 Testing:  
 CPU: Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz  
 RAM: 16GB  
