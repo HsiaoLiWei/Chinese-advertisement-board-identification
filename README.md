@@ -77,6 +77,7 @@ https://drive.google.com/drive/folders/1CBMReE3JznmqY9cujOODxZVkvzaPpjVb?usp=sha
 https://drive.google.com/drive/folders/1Ykd3-PxwKFrqryjAGKNiVP6eIvV5yu9r?usp=sharing
 
 # 5.Testing
+## 模型驗證，輸入圖片得到預測結果
 - 先將路徑移到yoloV5底下
 ```bash
 $ cd ./yoloV5
@@ -100,6 +101,7 @@ image 10/12 example\img_10017_1.png: 480x64 7 Texts, Done. (0.917s) 國立臺灣
 image 11/12 example\img_10028_5.png: 160x480 3 Texts, Done. (0.399s) 薑母鴨
 image 12/12 example\img_10028_6.png: 480x128 3 Texts, Done. (0.411s) 薑母鴨
 ```
+
 # Reference
 [1] https://github.com/ultralytics/yolov5  
 [2] https://github.com/pytorch/vision/blob/main/torchvision/models/resnet.py  
