@@ -132,7 +132,7 @@ image 11/12 example\img_10028_5.png: 160x480 3 Texts, Done. (0.399s) 薑母鴨
 image 12/12 example\img_10028_6.png: 480x128 3 Texts, Done. (0.411s) 薑母鴨
 ```
 ## image transform
-把dataset_preprocess.py的main改成執行image_transform()這個function即可
+- 把dataset_preprocess.py的main改成執行image_transform()這個function即可
 ```python
 def image_transform(path, points):
     img = cv2.imread(path)
