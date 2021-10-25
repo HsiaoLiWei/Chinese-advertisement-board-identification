@@ -254,7 +254,7 @@ def train_valid_get_imageChar():
     with open('./classification/configs/char_to_index_New.json', 'w') as f:
         json.dump(char_to_index, f)
 
-def train_Text_detection_get_bbox():
+def train_valid_detection_get_bbox():
     trainJsonPath = './dataset/train/json/'
     trainImgPath = './dataset/train/img/'
     trainSample = './dataset/datasetYolo/'
@@ -394,7 +394,7 @@ def image_transform(path, points):
 if __name__ in "__main__":
     train_valid_get_imageClassification()   # 生成的資料庫辨識是否是文字的 function
     train_valid_get_imageChar()             # 生成的資料庫辨識該圖像是哪個文字的 function
-    train_Text_detection_get_bbox()         # 生成的資料庫判斷文字位置的 function
+    train_valid_detection_get_bbox()         # 生成的資料庫判斷文字位置的 function
     private_img_get_preprocess()            # 生成預處理的資料庫，之後利用 yolo 抓出char位置，最後放入模型辨識
     # test_bbox()                             # 查看BBOX有沒有抓對
     # image_transform('./img_10065.jpg', np.array([ [169,593],[1128,207],[1166,411],[142,723] ])) # 將輸入圖片與要截取的四邊座標轉成正面
