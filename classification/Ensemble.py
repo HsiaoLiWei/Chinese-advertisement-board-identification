@@ -64,7 +64,8 @@ if __name__ in "__main__":
     print('Testing Text...')
     valid_data = TextData(path = '../dataset/single_private.txt', transform = True)
     vaildloader = torch.utils.data.DataLoader(valid_data, batch_size = 4, shuffle = False, num_workers = 8, pin_memory = False)
-    
+    ########################################################################################################################
+    ################################################## 修改自己訓練好的模型 ##################################################
     model1 = models.resnext50_32x4d(pretrained=True)
     in_feature = model1.fc.in_features
     model1.fc = nn.Linear(in_feature, len(index_to_char_Only))
@@ -120,8 +121,8 @@ if __name__ in "__main__":
     
     ArcModel_Noisy = torch.load('./private_model/Text_98.4700_139.pkl').cuda().eval()
     classifier_Noisy = torch.load('./private_model/classifier9847.pkl').cuda().eval()
+    ########################################################################################################################
     softmax = nn.Softmax(dim=1)
-
     with torch.no_grad():
         valid_bar = tqdm.tqdm(vaildloader)
         for img_path, img, img1  in valid_bar:
