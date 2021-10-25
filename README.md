@@ -131,7 +131,7 @@ image 10/12 example\img_10017_1.png: 480x64 7 Texts, Done. (0.917s) 國立臺灣
 image 11/12 example\img_10028_5.png: 160x480 3 Texts, Done. (0.399s) 薑母鴨
 image 12/12 example\img_10028_6.png: 480x128 3 Texts, Done. (0.411s) 薑母鴨
 ```
-## image transform
+## Image transform
 - 把dataset_preprocess.py的main改成執行image_transform()這個function即可
 ```python
 def image_transform(path, points):
@@ -153,7 +153,7 @@ if __name__ in "__main__":
 ```bash
 $ python3 dataset_preprocess.py
 ```
-## yoloV5 training and evaluation
+## YoloV5 training and evaluation
 - 按照yolov5官方提供的說明做資料前處理，做完之後即可訓練
 - yolov5的資料前處理已經寫在dataset_preprocess.py的train_valid_detection_get_bbox()裡面，所以執行完dataset_preprocess.py就有訓練資料了
 - 之後將路經移到"./yoloV5/"底下
