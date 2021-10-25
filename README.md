@@ -109,8 +109,10 @@ https://drive.google.com/drive/folders/1Ykd3-PxwKFrqryjAGKNiVP6eIvV5yu9r?usp=sha
 ```bash
 $ cd ./yoloV5
 ```
-- Please download the pre-trained model before you run "Text_detection.py" file. Then, please put your images under the path "./yoloV5/example/".
-- There are some examples under the folder "example". The predicted results will save on the path "./yoloV5/out/" after you run the code. And, the predicted results are on the back of filename. If no words or the images are not clear enough, the model will predict "###". Otherwise, it will show the predicted results.
+- Please download the pre-trained model before you run "Text_detection.py" file. Then, put your images under the path "./yoloV5/example/".
+- There are some examples under the folder "example". The predicted results will save on the path "./yoloV5/out/" after you run the code. The predicted results are on the back of filename. If no words or the images are not clear enough, the model will predict "###". Otherwise, it will show the predicted results.
+- **注意!! 執行程式時輸入圖片需要與"example"底下所提供的範例當輸入，若不是字串圖片，可以提供圖片與四個座標點的做image transform，這個function在dataset_preprocess.py裡面**
+- **注意!! Text classification的模型沒有加入EfficientNet-b5，若想要使用的話，需要自行解註解與修改程式**
 ```bash
 $ python3 Text_detection.py
 
@@ -129,7 +131,80 @@ image 10/12 example\img_10017_1.png: 480x64 7 Texts, Done. (0.917s) 國立臺灣
 image 11/12 example\img_10028_5.png: 160x480 3 Texts, Done. (0.399s) 薑母鴨
 image 12/12 example\img_10028_6.png: 480x128 3 Texts, Done. (0.411s) 薑母鴨
 ```
-- Text classification的模型沒有加入EfficientNet-b5，若想要使用的話，需要自行解註解與修改程式
+## image transform
+把dataset_preprocess.py的main改成執行image_transform()這個function即可
+```python
+def image_transform(path, points):
+    img = cv2.imread(path)
+    out = four_point_transform(img, points)
+    cv2.imwrite(path[:-4] + '_transform.jpg', out)
+
+if __name__ in "__main__":
+    # train_valid_get_imageClassification()   # 生成的資料庫辨識是否是文字的 function
+    # train_valid_get_imageChar()             # 生成的資料庫辨識該圖像是哪個文字的 function
+    # train_valid_detection_get_bbox()         # 生成的資料庫判斷文字位置的 function
+    # private_img_get_preprocess()            # 生成預處理的資料庫，之後利用 yolo 抓出char位置，最後放入模型辨識
+    # test_bbox()                             # 查看BBOX有沒有抓對
+    image_transform('./img_10065.jpg', np.array([ [169,593],[1128,207],[1166,411],[142,723] ])) # 將輸入圖片與要截取的四邊座標轉成正面
+```
+# 6.Training
+- 資料需要先放於"./dataset/"底下，只需要把官方提供的壓縮檔解壓縮即可。
+- 解壓縮後就可以進行訓練集前處理
+```bash
+$ python3 dataset_preprocess.py
+```
+## yoloV5 training and evaluation
+- 按照yolov5官方提供的說明做資料前處理，做完之後即可訓練
+- yolov5的資料前處理已經寫在dataset_preprocess.py的train_valid_detection_get_bbox()裡面，所以執行完dataset_preprocess.py就有訓練資料了
+- 之後將路經移到"./yoloV5/"底下
+```bash
+$ cd ./yoloV5
+```
+- 修改train.py底下的超參數後，就可以進行訓練，訓練前請下載[預訓練模型](#Download pretrained models)
+```bash
+$ python3 train.py
+```
+- 訓練結束後，測試模型效果，需要自行修改訓練好的模型路徑，且按照自己的模型調整適當的conf-thres與iou-thres值，資料庫使用的是private dataset，因此處理結束後是驗證private dataset，若想使用其他資料庫，請自行更改路徑
+```bash
+$ python3 detect.py
+```
+- 最後將路徑移動到classification底下
+```bash
+$ cd ../classification
+```
+- 執行文字辨識結果，如果有修改任何路徑與檔名，請在程式中自行修改
+```bash
+$ python3 Ensemble.py
+```
+## Text or ### classification Training
+- 將路徑移動到classification底下
+```bash
+$ cd ./classification
+```
+- classification的資料前處理已經寫在dataset_preprocess.py的train_valid_get_imageClassification()裡面，所以執行完dataset_preprocess.py就有訓練資料了
+- 訓練模型
+```bash
+$ python3 ClassArcTrainer.py
+```
+- fine-tune最後的分類器，需要自行修改模型路徑，把./modelsArc/底下最好的模型修改上去，修改ClassArcTest.py的第111行，之後執行
+```bash
+$ python3 ClassArcTest.py
+```
+## Text recognition Training
+- 將路徑移動到classification底下
+```bash
+$ cd ./classification
+```
+- classification的資料前處理已經寫在dataset_preprocess.py的train_valid_get_imageChar()裡面，所以執行完dataset_preprocess.py就有訓練資料了
+- 訓練我們提出的模型
+```bash
+$ python3 CharArcTrainer2.py
+```
+- 訓練resnext50 or resnext101模型
+```bash
+$ python3 CharTrainer.py
+```
+- **訓練完成後，可以修改Ensemble.py做模型的Text recognition與Text or ### classification，不過在這之前，需要執行過yolo的detect.py，先抓住單字框**
 
 # References
 [1] https://github.com/ultralytics/yolov5  
