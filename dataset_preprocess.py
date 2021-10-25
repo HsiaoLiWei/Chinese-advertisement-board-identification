@@ -275,7 +275,7 @@ def train_valid_detection_get_bbox():
             with open(trainJsonPath + file, encoding="utf-8") as f:
                 data = json.load(f)
             img = cv2.imread(trainImgPath + file.split('.')[0] + '.jpg')
-            imgs.append('./images/'+ folder + '/images/' + file.split('.')[0] + '.jpg')
+            imgs.append(trainSample + folder + '/images/' + file.split('.')[0] + '.jpg')
             
             for idx, value in enumerate(data['shapes']):
                 label = value['label']
