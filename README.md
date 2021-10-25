@@ -160,7 +160,7 @@ $ python3 dataset_preprocess.py
 ```bash
 $ cd ./yoloV5
 ```
-- 修改train.py底下的超參數後，就可以進行訓練，訓練前請下載[預訓練模型](#Download pretrained models)
+- 修改train.py底下的超參數後，就可以進行訓練，訓練前請下載[預訓練模型](# 5.Download pretrained models)
 ```bash
 $ python3 train.py
 ```
