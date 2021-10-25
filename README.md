@@ -109,8 +109,8 @@ https://drive.google.com/drive/folders/1Ykd3-PxwKFrqryjAGKNiVP6eIvV5yu9r?usp=sha
 ```bash
 $ cd ./yoloV5
 ```
-- Please download the pre-trained model before you run "Text_detection.py" file. Then, put your images under the path "./yoloV5/example/".
-- There are some examples under the folder "example". The predicted results will save on the path "./yoloV5/out/" after you run the code. The predicted results are on the back of filename. If no words or the images are not clear enough, the model will predict "###". Otherwise, it will show the predicted results.
+- Please download the pre-trained model before you run "Text_detection.py" file. Then, please put your images under the path "./yoloV5/example/".
+- There are some examples under the folder "example". The predicted results will save on the path "./yoloV5/out/" after you run the code. And, the predicted results are on the back of filename. If no words or the images are not clear enough, the model will predict "###". Otherwise, it will show the predicted results.
 ```bash
 $ python3 Text_detection.py
 
