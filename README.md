@@ -3,10 +3,10 @@
 
 # 1.Propose method
 ## The model
-- 我們針對官方給定的四點座標，先做四點校正(points tranforms)演算法，使用此演算法的原因是為了得到轉正的圖片，讓字體面積更大，也能讓模型更好的預測結果。校正好字串的圖片後，用已訓練好的Yolov5模型預測單字框的位置，框選出單字位置後，使用單字框排序(Sort Box location)演算法，排出所有文字的順序，這樣一來，找出的字串就不會有順序不對的問題，也可以透過Yolov5過濾到許多沒文字的圖片。接下來針對所有的單字框做兩種分類，第一種分類是否是文字，若不是文字，直接標出"###"; 若是文字，則使用單字分類器辨識文字
+- We first calibrate the direction of the image according to the given coordinates by points transforms algorithm to magnify the font of the characters, which improves the prediction result of the model. Next, we apply pre-trained Yolov5 to predict the box location of the characters, and use sort box location algorithm to sort the order of those located characters. With this, we can not only obviate the problem of string disorder, but also filter out images that contains no characters using Yolov5. Then, we perform two types of classification for each located character box. The first type of classification is to determine whether it is a character. If it is not, we directly label it as "###"; and if it is a character, we perform the second classifiation to recognize the character in the located box.
 <img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img/modelall.png" width=40% height=40%>
 
-- 這是我們提出來用於在CNN上能更準確分辨出文字的訓練方式，透過ArcMargin 、 FCN and Focal loss這兩者loss決定Backend，讓模型更能將特徵的差異性分辨更好，CNN的部份只要是分類架構都可以替換
+- This is our proposed training method for CNN that improves the precision on character recognition by incorporating ArcMargin, FCN, and Focal loss. By using these two types of loss to determine the backend, the classification model can further distinguish the difference between features (The choice of CNN model can be optional to any classification architecture).
 <img src="https://github.com/HsiaoLiWei/Chinese-advertisement-board-identification/blob/main/img/modelclass.png" width=40% height=40%>
 
 ## Data augmentation
