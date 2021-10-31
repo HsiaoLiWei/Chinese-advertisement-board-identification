@@ -111,8 +111,8 @@ $ cd ./yoloV5
 ```
 - Please download the pre-trained model before you run "Text_detection.py" file. Then, put your images under the path `./yoloV5/example/`.
 - There are some examples under the folder `example`. The predicted results will save on the path `./yoloV5/out/` after you run the code. The predicted results are on the back of filename. If no words or the images are not clear enough, the model will predict "###". Otherwise, it will show the predicted results.
-- **注意!! 執行程式時輸入圖片需要與"example"底下所提供的範例當輸入，若不是字串圖片，可以提供圖片與四個座標點的做image transform，這個function在dataset_preprocess.py裡面**
-- **注意!! Text classification的模型沒有加入EfficientNet-b5，若想要使用的話，需要自行解註解與修改程式**
+- **Note!! 執行程式時輸入圖片需要與"example"底下所提供的範例當輸入，若不是字串圖片，可以提供圖片與四個座標點的做image transform，這個function在dataset_preprocess.py裡面**
+- **Note!! Text classification的模型沒有加入EfficientNet-b5，若想要使用的話，需要自行解註解與修改程式**
 ```bash
 $ python3 Text_detection.py
 
