@@ -111,8 +111,8 @@ $ cd ./yoloV5
 ```
 - Please download the pre-trained model before you run "Text_detection.py" file. Then, put your images under the path `./yoloV5/example/`.
 - There are some examples under the folder `example`. The predicted results will save on the path `./yoloV5/out/` after you run the code. The predicted results are on the back of filename. If no words or the images are not clear enough, the model will predict "###". Otherwise, it will show the predicted results.
-- **Note!! 執行程式時輸入圖片需要與"example"底下所提供的範例當輸入，若不是字串圖片，可以提供圖片與四個座標點的做image transform，這個function在dataset_preprocess.py裡面**
-- **Note!! Text classification的模型沒有加入EfficientNet-b5，若想要使用的話，需要自行解註解與修改程式**
+- **Note!! You need to verify that the input image is the same as the given image under the folder "example". If the image is not a character image, you could provide the four points coordinate of the image, then deploy the function of image transform, which is in the file "dataset_preprocess.py".
+- - **Note!! The model of the text classification does not add the model of "EfficientNet-b5". If you would like to use it, you need to revise the code and de-comment by yourself.**
 ```bash
 $ python3 Text_detection.py
 
@@ -132,7 +132,8 @@ image 11/12 example\img_10028_5.png: 160x480 3 Texts, Done. (0.399s) 薑母鴨
 image 12/12 example\img_10028_6.png: 480x128 3 Texts, Done. (0.411s) 薑母鴨
 ```
 ## Image transform
-- 把dataset_preprocess.py的main改成執行image_transform()這個function即可
+
+- Change the main of "dataset_preprocess.py" to execute the function "image_transform()"
 ```python
 def image_transform(path, points):
     img = cv2.imread(path)
@@ -148,63 +149,64 @@ if __name__ in "__main__":
     image_transform('./img_10065.jpg', np.array([ [169,593],[1128,207],[1166,411],[142,723] ])) # 將輸入圖片與要截取的四邊座標轉成正面
 ```
 # 6.Training
-- 資料需要先放於`./dataset/`底下，只需要把官方提供的壓縮檔解壓縮即可。
-- 解壓縮後就可以進行訓練集前處理
+- The folder should be put under the fold "./dataset/" first, then unzip the .zip file provided by the official
+- The training data preprocessing can be running after you unzip the file.
 ```bash
 $ python3 dataset_preprocess.py
 ```
 ## YoloV5 training and evaluation
-- 按照yolov5官方提供的說明做資料前處理，做完之後即可訓練
-- yolov5的資料前處理已經寫在`dataset_preprocess.py`的train_valid_detection_get_bbox()裡面，所以執行完`dataset_preprocess.py`就有訓練資料了
-- 之後將路經移到`./yoloV5/`底下
+- Follow the instructions provided by the Yolov5 official to do the pre-processing of the data, and you can train after you finish.
+- The data pre-processing of Yolov5 has been written in the function "train_valid_detection_get_bbox()", which is in the file `dataset_preprocess.py`. Therefore, you can get the training data after you run the file `dataset_preprocess.py`.
+- After that, move you path to `./yoloV5/`.
 ```bash
 $ cd ./yoloV5
 ```
-- 修改`train.py`底下的超參數後，就可以進行訓練，訓練前請下載[預訓練模型](# 5.Download pretrained models)
+- After modifying the hyperparameters under the file `train.py`, you can start training. Please download the [pre-trained models](# 5.Download pretrained models) before training.
 ```bash
 $ python3 train.py
 ```
-- 訓練結束後，測試模型效果，需要自行修改訓練好的模型路徑，且按照自己的模型調整適當的conf-thres與iou-thres值，資料庫使用的是private dataset，因此處理結束後是驗證private dataset，若想使用其他資料庫，請自行更改路徑
+- After training, You need to modify the path of the model to evaluate the performance of the model. And tune the parameters of "conf-thres" and "iou-thres" values according to your own model. We evaluate our model using the private dataset. If you want to use another dataset, please modify the path by yourself.
 ```bash
 $ python3 detect.py
 ```
-- 最後將路徑移動到`classification`底下
+- Finally, please move path to `classification`. 
 ```bash
 $ cd ../classification
 ```
-- 執行文字辨識結果，如果有修改任何路徑與檔名，請在程式中自行修改
+- Run the results of the text classification. Please modify the code if you revise any path or filename
 ```bash
 $ python3 Ensemble.py
 ```
 ## Text or ### classification Training
-- 將路徑移動到`classification`底下
+- Please move path to `classification`.
 ```bash
 $ cd ./classification
 ```
-- classification的資料前處理已經寫在`dataset_preprocess.py`的train_valid_get_imageClassification()裡面，所以執行完`dataset_preprocess.py`就有訓練資料了
-- 訓練模型
+- The data pre-processing of classification has beeb written in the function "train_valid_get_imageClassification()", which is in the file `dataset_preprocess.py`. Therefore, you can get the training data after you run the file `dataset_preprocess.py`.
+- Model training.
 ```bash
 $ python3 ClassArcTrainer.py
 ```
-- fine-tune最後的分類器，需要自行修改模型路徑，把`./modelsArc/`底下最好的模型修改上去，修改`ClassArcTest.py`的第111行，之後執行
+- You need to modify the path by yourself to fine-tune the last classifier. use the best model which is in the folder `./modelsArc/` and modify the 111th line of `ClassArcTest.py`. After that, you can run the code.
 ```bash
 $ python3 ClassArcTest.py
 ```
 ## Text recognition Training
-- 將路徑移動到`classification`底下
+- Please move to path `classification`
 ```bash
 $ cd ./classification
 ```
-- classification的資料前處理已經寫在`dataset_preprocess.py`的train_valid_get_imageChar()裡面，所以執行完`dataset_preprocess.py`就有訓練資料了
-- 訓練我們提出的模型
+- The data pre-processing of classification has beeb written in the function "train_valid_get_imageChar()", which is in the file `dataset_preprocess.py`. Therefore, you can get the training data after you run the file `dataset_preprocess.py`.
+- Train the model we provided.
 ```bash
 $ python3 CharArcTrainer2.py
 ```
-- 訓練resnext50 or resnext101模型
+- Train the model of resnext50 or resnext101.
 ```bash
 $ python3 CharTrainer.py
 ```
 - **訓練完成後，可以修改`Ensemble.py`做模型的Text recognition與Text or ### classification，不過在這之前，需要執行過yolo的`detect.py`，先抓住單字框**
+- **
 
 # References
 [1] https://github.com/ultralytics/yolov5  
