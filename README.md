@@ -111,8 +111,8 @@ $ cd ./yoloV5
 ```
 - Please download the pre-trained model before you run "Text_detection.py" file. Then, put your images under the path `./yoloV5/example/`.
 - There are some examples under the folder `example`. The predicted results will save on the path `./yoloV5/out/` after you run the code. The predicted results are on the back of filename. If no words or the images are not clear enough, the model will predict "###". Otherwise, it will show the predicted results.
-**Note!! You need to verify that the input image is the same as the given image under the folder "example". If the image is not a character image, you could provide the four points coordinate of the image, then deploy the function of image transform, which is in the file "dataset_preprocess.py".**
-**Note!! The model of the text classification does not add the model of "EfficientNet-b5". If you would like to use it, you need to revise the code and de-comment by yourself.**
+- **Note!! You need to verify that the input image is the same as the given image under the folder "example". If the image is not a character image, you could provide the four points coordinate of the image, then deploy the function of image transform, which is in the file "dataset_preprocess.py".**
+- **Note!! The model of the text classification does not add the model of "EfficientNet-b5". If you would like to use it, you need to revise the code and de-comment by yourself.**
 ```bash
 $ python3 Text_detection.py
 
