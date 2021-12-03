@@ -1,5 +1,5 @@
 # Chinese-Advertisement-Board-Identification(Pytorch)  
-- Competition URL : https://tbrain.trendmicro.com.tw/Competitions/Details/16  (Private 5th place)
+- Competition URL : https://tbrain.trendmicro.com.tw/Competitions/Details/16  (Private 5th place)(趨勢科技人工智慧創意獎)
 
 # 1.Propose method
 ## The model
